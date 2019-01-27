@@ -1,0 +1,5 @@
+<Rollback>
+  <File path="CstPublished\pages_in\in202000.aspx" method="Delete" />
+  <File path="CstPublished\pages_in\in202000.aspx.cs" method="Delete" />
+  <File path="Bin\Hackathon.dll" method="Delete" />
+</Rollback>

@@ -8,6 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Hackathon_18_206_0011", "Hackathon_18_206_0011\", "{EAFBB4C5-86BA-48F5-A287-1E3815A09C09}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
+		ProjectReferences = "{fa200232-9309-4c52-9b63-4af0abb83c12}|Hackathon.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_57126"
 		Debug.AspNetCompiler.PhysicalPath = "Hackathon_18_206_0011\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57126\"
@@ -26,6 +27,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Hackathon_18_206_0011", "Ha
 		SlnRelativePath = "Hackathon_18_206_0011\"
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AcumaticaRequest", "AcumaticaRequest\AcumaticaRequest.csproj", "{5DF55E83-A4D3-47DA-814D-FF1DEF86E092}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +43,10 @@ Global
 		{EAFBB4C5-86BA-48F5-A287-1E3815A09C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAFBB4C5-86BA-48F5-A287-1E3815A09C09}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{EAFBB4C5-86BA-48F5-A287-1E3815A09C09}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5DF55E83-A4D3-47DA-814D-FF1DEF86E092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF55E83-A4D3-47DA-814D-FF1DEF86E092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF55E83-A4D3-47DA-814D-FF1DEF86E092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF55E83-A4D3-47DA-814D-FF1DEF86E092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
