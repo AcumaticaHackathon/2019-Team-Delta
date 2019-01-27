@@ -40,6 +40,7 @@ namespace AcumaticaRequest
             {
                 try
                 {
+                    Logout();
                     //client.Logout();// We should be logging out here but if we do after awhile another thread will throw a "not logged in" exception, session sharing issue? 
                 }
                 catch (Exception e)
@@ -57,7 +58,7 @@ namespace AcumaticaRequest
             HttpResponseMessage response = client.PostAsync(logoutURL, null).Result;
         }
 
-        public void Login(string username, string password, string company = "Company")
+        public void Login(string username, string password, string company = "Blank")
         {
             client.DefaultRequestHeaders.Accept.Clear();
             // Add an Accept header for JSON format.
@@ -81,13 +82,9 @@ namespace AcumaticaRequest
 
             string body = "{  \"ContractID\": {            \"value\": \"05SUPPORTP\"        },        \"UnbilledTransactions\":        [        	{        	\"InventoryID\": {            \"value\": \"Vacuum\"        },        \"Qty\": {                \"value\": 1            } }        	]}";
 
-            var response = client.PutAsync(endpointURL + "/ContractUsage", new StringContent(body)).Result;
-
-            //Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+            var response = client.PutAsync(endpointURL + "/ContractUsage", new StringContent(body, Encoding.UTF8, "application/json")).Result;
 
             string content = response.Content.ReadAsStringAsync().Result;
-
-            //var result = JsonConvert.DeserializeObject<ContractUsage>(content);
         }
 
     }

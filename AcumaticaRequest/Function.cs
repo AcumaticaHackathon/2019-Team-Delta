@@ -19,9 +19,9 @@ namespace AcumaticaRequest
         /// <param name="input"></param>
         /// <param name="context"></param>
         /// <returns></returns>
-        public string FunctionHandler(string input, ILambdaContext context)
+        public void FunctionHandler(ILambdaContext context)
         {
-            string error = string.Empty;
+            string error;
             try
             {
                 using (AcumaticaProcessor proc = new AcumaticaProcessor())
@@ -33,9 +33,8 @@ namespace AcumaticaRequest
             }
             catch (Exception e)
             {
-                error = e.Message;
+                error = "Error";
             }
-            return error;
         }
     }
 }
